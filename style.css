@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(233, 47%, 7%);
+}
+.wrapper{
+    width: 970px;
+    height: 400px;
+    display: flex;
+    background-color:  hsl(244, 38%, 16%);
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.wrapper>div{
+    width: 50%;
+    height: 100%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    padding: 50px;
+}
+.left h2{
+    font-size: 2rem;
+}
+.left h2 span{
+    color: hsl(277, 64%, 61%);
+}
+.left p{
+font-size: 13px;
+line-height: 22px;
+font-weight: 300;
+color: hsla(0, 0%, 100%, 0.75);
+padding-right: 60px;
+}
+.stats{
+    margin-top: 8%;
+    width: 100%;
+    color: hsla(0, 0%, 100%, 0.75);
+    display: flex;
+    justify-content: space-around;
+    margin-left: -7%;
+    text-transform: uppercase;
+    font-size: 10px;
+    /* font-weight: 500; */
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+.stats > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* align-items: center; */
+}
+.stats .stat-value{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.right{
+    background: url(./images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    /* background-color: hsl(277, 64%, 61%); */
+}
+.right::before{
+content: "";
+background: hsla(277, 96%, 29%, 0.542);
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+}
+h2,.stats{
+    font-family: "Lexend Deca";
+}
+.s1{
+    text-transform: lowercase;
+}
+
+@media (max-width:970px){
+    .wrapper{
+        width: 254px !important;
+        height: 629px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1%;
+        border-radius: 10px;
+    }
+    
+    .left,.right{
+        width: 100% !important;
+    }
+    .left{
+        height: 70% !important;
+        padding: 20px ;
+    }
+   
+    .left h2{
+        font-size: 20px ;
+        text-align: center;
+    }
+    .left p{
+        font-size: 12px;
+        padding: 0;
+        text-align: center;
+        width: 84%;
+        margin-left: 7%;
+        margin-top: -15%;
+    }
+    .stats{
+        margin-top: 0;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 22px;
+        margin-top: -8%;
+        text-align: center;
+    }
+    .stats .stat-value{
+        font-size: 19px;
+    }
+    
+    div.right{
+        
+        height: 30% !important;
+        background: url(./images/image-header-mobile.jpg);
+        background-size: contain;
+    }
+}
